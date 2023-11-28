@@ -3,6 +3,7 @@ MSCH-C220 Game Jam, November 2023
 
 ## Theme
 How you thought about or interpreted the theme
+We interpreted the theme literally. The way we used it is we move a cube from the inside, out by traversing a maze.
 
 ## Game Play
 Objective
@@ -16,8 +17,10 @@ Features
 Assets, or resources used
 
 ## References
+- Jelly Truck
 
 ## Future Development
+
 
 # Created by: Parmesean
 Jack Horvath, Seth Bolden, Haley O'Hair, Mailouda W.M 
