@@ -1,5 +1,5 @@
 # Team-Parmesean-Games
-Game for MSCH-C220 Final Project
+MSCH-C220 Game Jam, November 2023
 
 ## Theme
 How you thought about or interpreted the theme
@@ -20,4 +20,4 @@ Assets, or resources used
 ## Future Development
 
 # Created by: Parmesean
-Jack Horvath, Seth Bolden, Haley O'Hair, Mailouda W.M (List contributions)
+Jack Horvath, Seth Bolden, Haley O'Hair, Mailouda W.M 
