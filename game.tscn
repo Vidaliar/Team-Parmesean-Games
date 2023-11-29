@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://dso5lenpcum82"]
+[gd_scene load_steps=4 format=3 uid="uid://dso5lenpcum82"]
+
+[ext_resource type="PackedScene" uid="uid://ddmmi642xixnp" path="res://Cube/cube.tscn" id="1_ir0s2"]
+[ext_resource type="Script" path="res://game.gd" id="1_s6xk4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s58a2"]
+size = Vector2(140, 913)
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_s6xk4")
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/StaticBody2D"]
+position = Vector2(1094, 331)
+shape = SubResource("RectangleShape2D_s58a2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2"]
+position = Vector2(56, 321)
+shape = SubResource("RectangleShape2D_s58a2")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls/StaticBody2D3"]
+position = Vector2(575, 684)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_s58a2")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Walls"]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls/StaticBody2D4"]
+position = Vector2(583, -53)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_s58a2")
+
+[node name="Cube" parent="." instance=ExtResource("1_ir0s2")]
+position = Vector2(552, 354)
