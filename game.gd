@@ -17,3 +17,11 @@ func _on_left_pressed():
 
 func _on_right_pressed():
 	$Pivot.rotate(-90)
+
+
+func _on_area_2d_area_entered(area):
+	load("res://UI/win.tscn")
+
+
+func _on_area_2d_body_entered(body):
+	load("res://UI/win.tscn")

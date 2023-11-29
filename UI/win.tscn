@@ -1,18 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://cotacydgux2im"]
+[gd_scene load_steps=3 format=3 uid="uid://cdlthvpep7y2y"]
 
-[ext_resource type="Script" path="res://Main_Menu.gd" id="1_eheei"]
+[ext_resource type="Script" path="res://UI/win.gd" id="1_rv52g"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_kihwk"]
+[sub_resource type="LabelSettings" id="LabelSettings_1q1i5"]
 font_size = 60
 
-[node name="Main_Menu" type="Control"]
+[node name="Win" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_eheei")
+script = ExtResource("1_rv52g")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.682353, 0.937255, 1, 1)
+color = Color(0.996078, 0.831373, 0.870588, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -36,10 +36,10 @@ offset_right = 40.0
 offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Inside Out"
-label_settings = SubResource("LabelSettings_kihwk")
+text = "You Win!"
+label_settings = SubResource("LabelSettings_1q1i5")
 
-[node name="Start" type="Button" parent="."]
+[node name="Menu" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.496
@@ -52,14 +52,6 @@ offset_right = 63.608
 offset_bottom = 27.584
 grow_horizontal = 2
 grow_vertical = 0
-text = "Start"
+text = "Menu"
 
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_left = 446.0
-offset_top = 362.0
-offset_right = 721.0
-offset_bottom = 430.0
-text = "By: Jack, Seth, Haley, and Mai"
-
-[connection signal="pressed" from="Start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

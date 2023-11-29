@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dso5lenpcum82"]
+[gd_scene load_steps=8 format=3 uid="uid://dso5lenpcum82"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_a21mv"]
 [ext_resource type="PackedScene" uid="uid://ddmmi642xixnp" path="res://Cube/cube.tscn" id="2_fajye"]
@@ -8,6 +8,10 @@
 size = Vector2(140, 913)
 
 [sub_resource type="QuadMesh" id="QuadMesh_5y716"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_67otx"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_dmywj"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_a21mv")
@@ -69,3 +73,18 @@ position = Vector2(554, 55.0001)
 rotation = 1.5708
 scale = Vector2(126.25, 603.5)
 mesh = SubResource("QuadMesh_5y716")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(545, 554)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.99997, 6)
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_67otx")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Area2D"]
+position = Vector2(-2, 1)
+scale = Vector2(100, 100)
+mesh = SubResource("SphereMesh_dmywj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
