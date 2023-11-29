@@ -1,13 +1,29 @@
-[gd_scene load_steps=8 format=3 uid="uid://dso5lenpcum82"]
+[gd_scene load_steps=12 format=3 uid="uid://dso5lenpcum82"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_a21mv"]
 [ext_resource type="PackedScene" uid="uid://ddmmi642xixnp" path="res://Cube/cube.tscn" id="2_fajye"]
 [ext_resource type="Script" path="res://UI/Pivot.gd" id="3_nyjfh"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kujhl"]
+friction = 0.0
+bounce = 1.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s58a2"]
 size = Vector2(140, 913)
 
 [sub_resource type="QuadMesh" id="QuadMesh_5y716"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cx8jg"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ia3ch"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ett6w"]
+friction = 0.0
+bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_67otx"]
 
@@ -27,6 +43,7 @@ script = ExtResource("3_nyjfh")
 position = Vector2(-552, -349)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Pivot/Walls"]
+physics_material_override = SubResource("PhysicsMaterial_kujhl")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Pivot/Walls/StaticBody2D"]
 position = Vector2(908, 324)
@@ -38,6 +55,7 @@ scale = Vector2(126.25, 603.5)
 mesh = SubResource("QuadMesh_5y716")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Pivot/Walls"]
+physics_material_override = SubResource("PhysicsMaterial_cx8jg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Walls/StaticBody2D2"]
 position = Vector2(205, 318)
@@ -49,6 +67,7 @@ scale = Vector2(126.25, 603.5)
 mesh = SubResource("QuadMesh_5y716")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Pivot/Walls"]
+physics_material_override = SubResource("PhysicsMaterial_ia3ch")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pivot/Walls/StaticBody2D3"]
 position = Vector2(575, 684)
@@ -62,6 +81,7 @@ scale = Vector2(126.25, 603.5)
 mesh = SubResource("QuadMesh_5y716")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Pivot/Walls"]
+physics_material_override = SubResource("PhysicsMaterial_ett6w")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Pivot/Walls/StaticBody2D4"]
 position = Vector2(585, 51)
@@ -75,7 +95,7 @@ scale = Vector2(126.25, 603.5)
 mesh = SubResource("QuadMesh_5y716")
 
 [node name="Goal" type="Area2D" parent="."]
-position = Vector2(545, 554)
+position = Vector2(783, 178)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(1.99997, 6)
