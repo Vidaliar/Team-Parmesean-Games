@@ -1,6 +1,5 @@
 
 [gd_scene load_steps=12 format=3 uid="uid://dso5lenpcum82"]
->>>>>>> 950fc4c2aa392233623f5d302843664f35cddc38
 
 [ext_resource type="Script" path="res://game.gd" id="1_a21mv"]
 [ext_resource type="PackedScene" uid="uid://ddmmi642xixnp" path="res://Cube/cube.tscn" id="2_fajye"]
