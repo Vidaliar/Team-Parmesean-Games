@@ -9,6 +9,8 @@ We interpreted the theme literally. The way we used it is we move a cube from th
 Objective
 Game-play instructions
 
+Use the A and D keys to rotate the space to move the ball out of a maze to reach the goal point.
+
 ## Impediments
 Struggles or surprises you encountered during the development of the game
 
