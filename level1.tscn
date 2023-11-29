@@ -5131,7 +5131,7 @@ scale = Vector2(126.25, 603.5)
 mesh = SubResource("QuadMesh_5y716")
 
 [node name="Goal" type="Area2D" parent="."]
-position = Vector2(545, 554)
+position = Vector2(783, 178)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(-2.00003, 1)
