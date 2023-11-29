@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://hsrfop1w41yq"]
+
+[ext_resource type="Script" path="res://UI/levels.gd" id="1_6bksj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pcysk"]
+font_size = 60
+
+[node name="Levels" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6bksj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.756863, 0.937255, 0.780392, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.483
+anchor_top = 0.182
+anchor_right = 0.483
+anchor_bottom = 0.182
+offset_left = -90.416
+offset_top = -42.936
+offset_right = 90.584
+offset_bottom = 43.064
+grow_horizontal = 2
+grow_vertical = 2
+text = "Levels:
+"
+label_settings = SubResource("LabelSettings_pcysk")
+
+[node name="Level1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.027
+anchor_bottom = 0.117
+offset_left = 92.0
+offset_top = 220.0
+offset_right = 221.896
+offset_bottom = 207.184
+text = "Level 1"
+
+[connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
