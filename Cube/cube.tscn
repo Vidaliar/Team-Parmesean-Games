@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Cube/Cube.gd" id="1_sh671"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_lp1l2"]
+[sub_resource type="SphereMesh" id="SphereMesh_hifud"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3j5xf"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wh76"]
 
 [node name="Cube" type="Node2D"]
 
@@ -13,8 +13,8 @@ script = ExtResource("1_sh671")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
 scale = Vector2(100, 100)
-mesh = SubResource("QuadMesh_lp1l2")
+mesh = SubResource("SphereMesh_hifud")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(5, 5)
-shape = SubResource("RectangleShape2D_3j5xf")
+shape = SubResource("CircleShape2D_8wh76")
