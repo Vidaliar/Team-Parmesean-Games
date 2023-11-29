@@ -74,17 +74,17 @@ rotation = 1.5708
 scale = Vector2(126.25, 603.5)
 mesh = SubResource("QuadMesh_5y716")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Goal" type="Area2D" parent="."]
 position = Vector2(545, 554)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(1.99997, 6)
 scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_67otx")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Area2D"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Goal"]
 position = Vector2(-2, 1)
 scale = Vector2(100, 100)
 mesh = SubResource("SphereMesh_dmywj")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Goal" to="." method="_on_area_2d_body_entered"]

@@ -2,4 +2,4 @@ extends Control
 
 
 func _on_level_1_pressed():
-	load("res://level1.tscn")
+	get_tree().change_scene_to_file("res://level1.tscn")

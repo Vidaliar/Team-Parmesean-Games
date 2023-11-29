@@ -2,4 +2,4 @@ extends Control
 
 
 func _on_button_pressed():
-	load("res://UI/levels.tscn")
+	get_tree().change_scene_to_file("res://UI/levels.tscn")
