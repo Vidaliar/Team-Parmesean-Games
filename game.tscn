@@ -1,41 +1,71 @@
-[gd_scene load_steps=4 format=3 uid="uid://dso5lenpcum82"]
+[gd_scene load_steps=6 format=3 uid="uid://dso5lenpcum82"]
 
 [ext_resource type="PackedScene" uid="uid://ddmmi642xixnp" path="res://Cube/cube.tscn" id="1_ir0s2"]
 [ext_resource type="Script" path="res://game.gd" id="1_s6xk4"]
+[ext_resource type="Script" path="res://UI/Pivot.gd" id="3_phg78"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s58a2"]
 size = Vector2(140, 913)
 
+[sub_resource type="QuadMesh" id="QuadMesh_5y716"]
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_s6xk4")
 
-[node name="Walls" type="Node2D" parent="."]
+[node name="Cube" parent="." instance=ExtResource("1_ir0s2")]
+position = Vector2(552, 354)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Walls"]
+[node name="Pivot" type="Node2D" parent="."]
+position = Vector2(552, 349)
+script = ExtResource("3_phg78")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/StaticBody2D"]
-position = Vector2(1094, 331)
+[node name="Walls" type="Node2D" parent="Pivot"]
+position = Vector2(-552, -349)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Pivot/Walls"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Pivot/Walls/StaticBody2D"]
+position = Vector2(908, 324)
 shape = SubResource("RectangleShape2D_s58a2")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Walls"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Pivot/Walls/StaticBody2D"]
+position = Vector2(907, 396)
+scale = Vector2(126.25, 603.5)
+mesh = SubResource("QuadMesh_5y716")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D2"]
-position = Vector2(56, 321)
+[node name="StaticBody2D2" type="StaticBody2D" parent="Pivot/Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Walls/StaticBody2D2"]
+position = Vector2(205, 318)
 shape = SubResource("RectangleShape2D_s58a2")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Walls"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Pivot/Walls/StaticBody2D2"]
+position = Vector2(210, 372)
+scale = Vector2(126.25, 603.5)
+mesh = SubResource("QuadMesh_5y716")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls/StaticBody2D3"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="Pivot/Walls"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pivot/Walls/StaticBody2D3"]
 position = Vector2(575, 684)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_s58a2")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="Walls"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Pivot/Walls/StaticBody2D3"]
+position = Vector2(564, 676)
+rotation = 1.5708
+scale = Vector2(126.25, 603.5)
+mesh = SubResource("QuadMesh_5y716")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls/StaticBody2D4"]
-position = Vector2(583, -53)
+[node name="StaticBody2D4" type="StaticBody2D" parent="Pivot/Walls"]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Pivot/Walls/StaticBody2D4"]
+position = Vector2(585, 51)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_s58a2")
 
-[node name="Cube" parent="." instance=ExtResource("1_ir0s2")]
-position = Vector2(552, 354)
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Pivot/Walls/StaticBody2D4"]
+position = Vector2(554, 55.0001)
+rotation = 1.5708
+scale = Vector2(126.25, 603.5)
+mesh = SubResource("QuadMesh_5y716")
