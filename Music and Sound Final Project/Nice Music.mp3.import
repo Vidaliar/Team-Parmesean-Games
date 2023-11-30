@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmrkvqt7bfc5i"
+path="res://.godot/imported/Nice Music.mp3-95b5bb58537424c4daf2e52f018ed1b2.mp3str"
+
+[deps]
+
+source_file="res://Music and Sound Final Project/Nice Music.mp3"
+dest_files=["res://.godot/imported/Nice Music.mp3-95b5bb58537424c4daf2e52f018ed1b2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

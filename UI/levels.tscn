@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://hsrfop1w41yq"]
+[gd_scene load_steps=4 format=3 uid="uid://hsrfop1w41yq"]
 
 [ext_resource type="Script" path="res://UI/levels.gd" id="1_6bksj"]
+[ext_resource type="AudioStream" uid="uid://csnufti5h87be" path="res://Music and Sound Final Project/Level.mp3" id="2_mo7ik"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pcysk"]
 font_size = 60
@@ -50,5 +51,9 @@ offset_top = 220.0
 offset_right = 221.896
 offset_bottom = 207.184
 text = "Level 1"
+
+[node name="Level_Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_mo7ik")
+autoplay = true
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]

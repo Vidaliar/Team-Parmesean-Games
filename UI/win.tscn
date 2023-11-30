@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdlthvpep7y2y"]
+[gd_scene load_steps=4 format=3 uid="uid://cdlthvpep7y2y"]
 
 [ext_resource type="Script" path="res://UI/win.gd" id="1_rv52g"]
+[ext_resource type="AudioStream" uid="uid://ccooayjm67s64" path="res://Music and Sound Final Project/violin.mp3" id="2_jgj2b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1q1i5"]
 font_size = 60
@@ -53,5 +54,9 @@ offset_bottom = 27.584
 grow_horizontal = 2
 grow_vertical = 0
 text = "Menu"
+
+[node name="Win_Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jgj2b")
+autoplay = true
 
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
