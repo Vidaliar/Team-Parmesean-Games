@@ -23,22 +23,10 @@ texture = ExtResource("1_rvxsb")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D2"]
 visible = false
-<<<<<<< Updated upstream
 scale = Vector2(15, 15)
 mesh = SubResource("SphereMesh_hifud")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
-=======
-script = ExtResource("1_sh671")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D"]
-scale = Vector2(15, 15)
-mesh = SubResource("SphereMesh_hifud")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
->>>>>>> Stashed changes
 scale = Vector2(0.75, 0.75)
 shape = SubResource("CircleShape2D_8wh76")
 
