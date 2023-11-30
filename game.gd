@@ -19,9 +19,6 @@ func _on_right_pressed():
 	$Pivot.rotate(-90)
 
 
-func _on_area_2d_area_entered(area):
-	get_tree().change_scene_to_file("res://UI/win.tscn")
 
-
-func _on_area_2d_body_entered(body):
+func _on_area_2d_2_body_entered(body):
 	get_tree().change_scene_to_file("res://UI/win.tscn")
