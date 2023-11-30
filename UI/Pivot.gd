@@ -9,7 +9,7 @@ func _physics_process(delta):
 		rotate_object(-delta)
 	elif Input.is_action_pressed("right"):
 		rotate_object(delta)
-
+	
 func rotate_object(delta):
 	# Calculate the rotation angle based on the time elapsed and the rotation speed
 	var rotation_angle = deg_to_rad(rotation_speed) * delta
