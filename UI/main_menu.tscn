@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cotacydgux2im"]
+[gd_scene load_steps=4 format=3 uid="uid://cotacydgux2im"]
 
 [ext_resource type="Script" path="res://Main_Menu.gd" id="1_eheei"]
+[ext_resource type="AudioStream" uid="uid://cgerymhfq32wy" path="res://Music and Sound Final Project/flute.mp3" id="2_cghxy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kihwk"]
 font_size = 60
@@ -61,5 +62,9 @@ offset_top = 362.0
 offset_right = 721.0
 offset_bottom = 430.0
 text = "By: Jack, Seth, Haley, and Mai"
+
+[node name="Main_Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_cghxy")
+autoplay = true
 
 [connection signal="pressed" from="Start" to="." method="_on_button_pressed"]

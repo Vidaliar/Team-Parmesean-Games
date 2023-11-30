@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dv3v4gkkh4haq"
+path="res://.godot/imported/Switch.wav-82b8892753f6712ea32f6865c00f7c18.sample"
+
+[deps]
+
+source_file="res://Music and Sound Final Project/Switch.wav"
+dest_files=["res://.godot/imported/Switch.wav-82b8892753f6712ea32f6865c00f7c18.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

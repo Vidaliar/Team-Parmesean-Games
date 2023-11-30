@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7ttxmarn5yy8"
+path="res://.godot/imported/Swish.wav-bc267190eb8d25b02152c3fb23e1df66.sample"
+
+[deps]
+
+source_file="res://Music and Sound Final Project/Swish.wav"
+dest_files=["res://.godot/imported/Swish.wav-bc267190eb8d25b02152c3fb23e1df66.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

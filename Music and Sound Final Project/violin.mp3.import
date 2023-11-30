@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ccooayjm67s64"
+path="res://.godot/imported/violin.mp3-c7f64c36e7ac10a8bb6a3bb8f547b6e1.mp3str"
+
+[deps]
+
+source_file="res://Music and Sound Final Project/violin.mp3"
+dest_files=["res://.godot/imported/violin.mp3-c7f64c36e7ac10a8bb6a3bb8f547b6e1.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
