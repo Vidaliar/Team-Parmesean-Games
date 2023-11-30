@@ -27,8 +27,8 @@ Assets, or resources used
 ## Future Development
 
 
-# Created by: Parmesean
-Jack Horvath (Coding)
-Seth Bolden (Art/Managment)
-Haley O'Hair (Music)
-Mailouda W.M (Misc.)
+# Created by: Team Parmesean Games
+- Jack Horvath (Coding)
+- Seth Bolden (Art/Managment)
+- Haley O'Hair (Music)
+- Mailouda W.M (Misc.)
