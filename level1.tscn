@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://dso5lenpcum82"]
+[gd_scene load_steps=26 format=3 uid="uid://dso5lenpcum82"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_a21mv"]
 [ext_resource type="PackedScene" uid="uid://ddmmi642xixnp" path="res://Cube/cube.tscn" id="2_fajye"]
 [ext_resource type="Script" path="res://UI/Pivot.gd" id="3_nyjfh"]
 [ext_resource type="Texture2D" uid="uid://bkr6d4ekgvsch" path="res://Assets/dirt-tiles.png" id="4_ejwfq"]
 [ext_resource type="Texture2D" uid="uid://bdnp2niavm1n2" path="res://Assets/Tileset.png" id="5_gxivs"]
+[ext_resource type="Texture2D" path="res://Assets/flag_red.png" id="6_0651k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_771nu"]
 resource_name = "Tilemap A"
@@ -5077,6 +5078,9 @@ size = Vector2(5, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3sas"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8s2cm"]
+size = Vector2(35.6875, 22.5)
+
 [node name="Level1" type="Node2D"]
 position = Vector2(-7, 2)
 script = ExtResource("1_a21mv")
@@ -5211,6 +5215,20 @@ position = Vector2(575, 378)
 scale = Vector2(10, 1)
 shape = SubResource("RectangleShape2D_i3sas")
 
-[node name="Cube" parent="Pivot" instance=ExtResource("2_fajye")]
-position = Vector2(1.00006, -5.99997)
+[node name="Area2D" type="Area2D" parent="Pivot"]
+position = Vector2(-552, -349)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pivot/Area2D"]
+position = Vector2(554, 551)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_0651k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/Area2D"]
+position = Vector2(551, 552)
+shape = SubResource("RectangleShape2D_8s2cm")
+
+[node name="Cube" parent="." instance=ExtResource("2_fajye")]
+position = Vector2(553, 347)
 scale = Vector2(0.1, 0.1)
+
+[connection signal="area_entered" from="Pivot/Area2D" to="." method="_on_area_2d_area_entered"]
