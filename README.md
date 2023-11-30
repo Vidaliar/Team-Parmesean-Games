@@ -20,6 +20,8 @@ Assets, or resources used
 
 ## References
 - Jelly Truck
+- Music recorded in [MuseScore 4.1.1](https://musescore.org/en)
+- Sound effects recorded in [Audacity 3.3.3](https://www.audacityteam.org/)
 
 ## Future Development
 
