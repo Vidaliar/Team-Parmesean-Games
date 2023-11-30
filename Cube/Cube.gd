@@ -26,7 +26,7 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	var camera_position = global_position + camera_target_offset
-	get_parent().get_node("Camera2D").global_position = camera_position
+	
 
+	#move_and_collide
 	move_and_slide()
