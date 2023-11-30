@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Wack Music.mp3-de8543ae132a6dde1ee0050391cc52
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

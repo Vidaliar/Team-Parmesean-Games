@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dso5lenpcum82"]
+[gd_scene load_steps=14 format=3 uid="uid://dso5lenpcum82"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_a21mv"]
 [ext_resource type="PackedScene" uid="uid://ddmmi642xixnp" path="res://Cube/cube.tscn" id="2_fajye"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Cube/ball.gd" id="6_dxsgx"]
 [ext_resource type="AudioStream" uid="uid://bo3f683jhedku" path="res://Music and Sound Final Project/Game Music.mp3" id="6_hp0gx"]
 [ext_resource type="Texture2D" uid="uid://dqm58shl04jgj" path="res://Assets/flag_red.png" id="7_co3iy"]
+[ext_resource type="AudioStream" uid="uid://bktmjdrmumosp" path="res://Music and Sound Final Project/Pop.wav" id="9_bywbt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_771nu"]
 resource_name = "Tilemap A"
@@ -5073,5 +5074,9 @@ script = ExtResource("6_dxsgx")
 [node name="Level1_Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_hp0gx")
 autoplay = true
+
+[node name="Ball_Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_bywbt")
+volume_db = 10.0
 
 [connection signal="body_entered" from="Pivot/Area2D" to="." method="_on_area_2d_body_entered"]

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Groovy Music.mp3-6c15f9daa6283f99ee6557646fd6
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
