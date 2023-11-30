@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ddmmi642xixnp"]
 
-[ext_resource type="Texture2D" uid="uid://d11grbtdqq0k8" path="res://Assets/snowball.png" id="1_rvxsb"]
+[ext_resource type="Texture2D" uid="uid://bsleh5yk78ou" path="res://Assets/snowball.png" id="1_rvxsb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_56aih"]
 rough = true

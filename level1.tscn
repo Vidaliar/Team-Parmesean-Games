@@ -1,11 +1,12 @@
-[gd_scene load_steps=26 format=3 uid="uid://dso5lenpcum82"]
+[gd_scene load_steps=27 format=3 uid="uid://dso5lenpcum82"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_a21mv"]
 [ext_resource type="PackedScene" uid="uid://ddmmi642xixnp" path="res://Cube/cube.tscn" id="2_fajye"]
 [ext_resource type="Script" path="res://UI/Pivot.gd" id="3_nyjfh"]
 [ext_resource type="Texture2D" uid="uid://bkr6d4ekgvsch" path="res://Assets/dirt-tiles.png" id="4_ejwfq"]
 [ext_resource type="Texture2D" uid="uid://bdnp2niavm1n2" path="res://Assets/Tileset.png" id="5_gxivs"]
-[ext_resource type="Texture2D" uid="uid://cbxr6gayd0bt4" path="res://Assets/flag_red.png" id="6_0651k"]
+[ext_resource type="Texture2D" uid="uid://dvonoippxomva" path="res://Assets/flag_red.png" id="6_0651k"]
+[ext_resource type="Script" path="res://UI/Label.gd" id="7_rtrjc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_771nu"]
 resource_name = "Tilemap A"
@@ -5242,6 +5243,13 @@ shape = SubResource("RectangleShape2D_8s2cm")
 [node name="Cube" parent="." instance=ExtResource("2_fajye")]
 position = Vector2(553, 347)
 scale = Vector2(0.1, 0.1)
+
+[node name="Label" type="Label" parent="Cube"]
+offset_left = -1780.0
+offset_top = -1020.0
+offset_right = -1740.0
+offset_bottom = -997.0
+script = ExtResource("7_rtrjc")
 
 [connection signal="area_entered" from="Pivot/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Pivot/Area2D2" to="." method="_on_area_2d_2_body_entered"]
