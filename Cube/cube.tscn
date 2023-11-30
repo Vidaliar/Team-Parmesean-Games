@@ -1,32 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddmmi642xixnp"]
-
-[ext_resource type="Script" path="res://Cube/Cube.gd" id="1_sh671"]
+[gd_scene load_steps=3 format=3 uid="uid://ddmmi642xixnp"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_hifud"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k1s6n"]
-friction = 0.0
-bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8wh76"]
 
 [node name="Cube" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_sh671")
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+mass = 0.5
+gravity_scale = 0.5
+can_sleep = false
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
-scale = Vector2(100, 100)
+[node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D"]
+scale = Vector2(15, 15)
 mesh = SubResource("SphereMesh_hifud")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="CharacterBody2D"]
-scale = Vector2(1, 1)
-physics_material_override = SubResource("PhysicsMaterial_k1s6n")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/StaticBody2D"]
-scale = Vector2(5, 5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+scale = Vector2(0.75, 0.75)
 shape = SubResource("CircleShape2D_8wh76")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-scale = Vector2(5, 5)
-shape = SubResource("CircleShape2D_8wh76")
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
+zoom = Vector2(3, 3)
