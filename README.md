@@ -20,6 +20,7 @@ Features
 Assets, or resources used
 - Music recorded in [MuseScore 4.1.1](https://musescore.org/en)
 - Sound effects recorded in [Audacity 3.3.3](https://www.audacityteam.org/)
+- Tilemap from Ninja Adventure (https://www.patreon.com/pixelarchipel) 
 
 ## References
 - Jelly Truck
