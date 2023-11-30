@@ -3,7 +3,7 @@ extends Node2D
 var rotation_speed = 90  # Degrees per second
 var pivot_point = Vector2(0, 0)  # Adjust the pivot point coordinates as needed
 
-func _process(delta):
+func _physics_process(delta):
 	# Check for input and rotate the object accordingly
 	if Input.is_action_pressed("left"):
 		rotate_object(-delta)

@@ -1,20 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddmmi642xixnp"]
+[gd_scene load_steps=4 format=3 uid="uid://ddmmi642xixnp"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_hifud"]
+[ext_resource type="Texture2D" uid="uid://ueeob1mabuss" path="res://Assets/snowball.png" id="1_thfa2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lyk07"]
+friction = 0.5
+rough = true
+bounce = 0.2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8wh76"]
 
 [node name="Cube" type="Node2D"]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(0, 1)
 mass = 0.5
+physics_material_override = SubResource("PhysicsMaterial_lyk07")
 gravity_scale = 0.5
-continuous_cd = 1
+continuous_cd = 2
 can_sleep = false
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D"]
-scale = Vector2(15, 15)
-mesh = SubResource("SphereMesh_hifud")
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_thfa2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 scale = Vector2(0.75, 0.75)
